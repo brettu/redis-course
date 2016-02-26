@@ -1,12 +1,12 @@
 default: &default
   adapter: postgresql
   host: localhost
-  database: scorecard
+  database: clickbait
 
 test:
   <<: *default
-  database: scorecard_test
+  database: clickbait_test
 
 development:
   <<: *default
-  database: scorecard_development
+  database: clickbait_development
