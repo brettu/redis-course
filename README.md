@@ -10,11 +10,11 @@ Learn how Redis can help your relational database driven application performance
 
 For this example we will be using Rails, Postgres, and Redis. Please follow the installation guide below.
 
-1. [Install Homebrew](http://brew.sh/){:target='_blank'}
+1. [Install Homebrew](http://brew.sh/)
 
 2. [Rails on El Capitan](https://gorails.com/setup/osx/10.11-el-capitan). We will be using Postgres, so you don't need to install MySQL in this guide.
 
-3. Follow the Homebrew Postgres instructions in the above guide to install with or download the Postgres app for MAC [here](http://postgresapp.com/){:target="_blank"}. I find the Postgres app to be very useful.
+3. Follow the Homebrew Postgres instructions in the above guide to install with or download the Postgres app for MAC [here](http://postgresapp.com/). I find the Postgres app to be very useful.
 
 4. Install Redis with Homebrew with `$ brew install redis`. Then follow the prompt to start the server.
 
