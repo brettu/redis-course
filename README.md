@@ -1,24 +1,36 @@
-# Redis & Postgres Case Study
+# Rails, Redis, & Postgres Case Study
 
 Follow this course to see how Redis and Postgres can work together for high performance custom application development.
 
 ## Goals
 
-Learn how Redis can help your relational database driven application without sacrificing code maintainability or sanity.
+Learn how Redis can help your relational database driven application performance.
 
-## Sample applications
+## Getting setup
 
-Download Rails or Node Express to create a film database.
+For this example we will be using Rails, Postgres, and Redis. Please follow the installation guide below.
 
-Install Redis using this [guide]()
+1. [Install Homebrew](http://brew.sh/)
 
-For application code you can choose Rails or Express.
+2. [Rails on El Capitan](https://gorails.com/setup/osx/10.11-el-capitan). We will be using Postgres, so you don't need to install MySQL in this guide.
 
-For Rails [follow this guide](http://)
+3. Follow the Homebrew Postgres instructions in the above guide to install with or download the Postgres app for MAC [here](http://postgresapp.com/). I find the Postgres app to be very useful.
 
-or
+4. Install Redis with Homebrew with `$ brew install redis`. Then follow the prompt to start the server.
 
+5. Clone this application and `cd` into the application directory.
+
+6. Run `bundle install`
+
+
+7. Run
+
+
+
+
+### Coming soon
 For Express [follow this guide](http://)
+
 
 ## Benchamrk the application
 
@@ -27,11 +39,10 @@ The homepage loads a list of actors and movies. Click through the
 
 ## Populate the Redis instance
 
-### Links
+### Links/Resources
 
 Redis
 [Redis](http://redis.io/)
-[Redis Download](http://redis.io/download)
 
 Postgres for Mac app: http://postgresapp.com/
 
@@ -44,7 +55,6 @@ Postgres for Mac app: http://postgresapp.com/
 [http://expressjs.com/en/starter/generator.html](http://expressjs.com/en/starter/generator.html)
 
 - Redis
-
 
 ### IMDB Application
 
