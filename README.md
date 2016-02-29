@@ -22,14 +22,13 @@ For this example we will be using Rails, Postgres, and Redis. Please follow the 
 
 6. From the application run `bundle install`
 
-
-7. Run
-
+7. Run `$ rake db:migrate` && `$ rake db:seed`. This takes about 20 minutes.
 
 
 
 ### Coming soon
-For Express [follow this guide](http://)
+
+An example application for the Express framework.
 
 
 ## Benchamrk the application
