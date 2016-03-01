@@ -1,5 +1,7 @@
 # Rails, Redis, & Postgres Case Study
 
+In this case study we will compare Postgres with Redis scoring functions.
+
 ## Goals
 
 Learn how Redis can help improve performance of your relational database driven application.
@@ -51,9 +53,9 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
 
 9. Restore the database with `$ pg_restore -d clickbait_development clickbait_dev.tar`
 
-10. Run `$ rake db:migrate` and start the console with `$ rails console`
+10. Run `$ rails server` and navigate to [localhost:3000](http://localhost:3000). The web app should be running.
 
-11. In console query to confirm  365000 score cards have been created.
+11. In console query to confirm 365000 score cards have been created.
 
     ```bash
     $ rails c
