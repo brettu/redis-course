@@ -8,7 +8,7 @@ Learn how Redis can help your relational database driven application performance
 
 ## Setup the application demo
 
-For this example we will be using Rails, Postgres, and Redis. Please follow the installation guide below.
+This example uses Rails, Postgres, and Redis. Please follow the installation guide below. Setup takes 10 to 30 minutes depending on experience with the technologies.
 
 1. [Install Homebrew](http://brew.sh/)
 
@@ -28,21 +28,37 @@ redis 127.0.0.1:6379> get mykey
 "somevalue"
 ```
 
-5. Clone this application and `cd` into the application directory.
-
-6. Download the example DB [here](http://bwcompsci.s3.amazonaws.com/presentations/clickbait_dev.tar)
+5. Clone this application and `cd` into the app directory.
 
 6. From the application root run `bundle install`
 
-7. Run `$ rake db:create`
+7. Download the example DB [here](http://bwcompsci.s3.amazonaws.com/presentations/clickbait_dev.tar)
 
-8. Restore the database with `$ pg_restore -d clickbait_development clickbait_dev.tar`
+8. Create the 'clickbait_development' database with psql or rake.
 
-9. Run `$ rake db:migrate` and start the console with `$ rails console`
+To create the database with psql:
 
-10. In console you should see the following:
+```bash
+➜  redis-course git:(master) ✗ psql
+psql (9.4.0)
+Type "help" for help.
 
-```ruby
+BrettU=# create database clickbait_development;
+CREATE DATABASE
+```
+
+OR with rake and Rails
+
+`$ rake db:create`
+
+
+9. Restore the database with `$ pg_restore -d clickbait_development clickbait_dev.tar`
+
+10. Run `$ rake db:migrate` and start the console with `$ rails console`
+
+11. In console you should see the following:
+
+```bash
 ➜  redis-course git:(master) rails c
 Running via Spring preloader in process 68649
 Loading development environment (Rails 4.2.5.1)
@@ -50,6 +66,8 @@ irb(main):001:0> ScoreCard.count
    (49.9ms)  SELECT COUNT(*) FROM "score_cards"
 => 365000
 ```
+
+Issues? Google the exception message or open a issue in this repo.
 
 
 ### Coming soon
