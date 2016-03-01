@@ -32,7 +32,7 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
 
 6. `cd` into the application root run `bundle install`
 
-7. Download the example DB [here](http://bwcompsci.s3.amazonaws.com/presentations/clickbait_dev.tar)
+7. Download the example DB [here](http://bwcompsci.s3.amazonaws.com/presentations/clickbait_dev.tar). To note you can run `$ rake db:seed` to populate the database but it takes 20 minutes to get everything created. Downloading the tarball and using `pg_restore` takes abount 1 minute.
 
 8. Create the 'clickbait_development' database with psql or rake.
 
@@ -72,6 +72,8 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
     => "PONG"
     irb(main):002:0>
     ```
+
+Congratulations on setting up the demo application. We can have a live demo when in class.
 
 Issues? Google the exception message or open a issue in this repo.
 
