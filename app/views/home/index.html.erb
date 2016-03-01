@@ -1,0 +1,29 @@
+<h2>Contests | <a href="/leaderboard">Leaderboard</a></h2>
+<table class="table table-hover">
+  <tr>
+    <th>#</th>
+    <th>Prize</th>
+    <th>Enter</th>
+    <th>Redis Results</th>
+    <th>Postgres Results</th>
+  </tr>
+  <% @contests.each_with_index do |contest, idx| %>
+    <tr>
+      <td>
+        <%= idx + 1 %>
+      </td>
+      <td>
+        <%= contest.prize %>
+      </td>
+      <td>
+        <a class="btn btn-default" href="/contests/<%= contest.id %>">Play</a>
+      </td>
+      <td>
+        <a class="btn btn-default" href="/contests/<%= contest.id %>/redis">Leaderboard Redis</a>
+      </td>
+      <td>
+        <a class="btn btn-default" href="/contests/<%= contest.id %>/postgres">Leaderboard Postgres</a>
+      </td>
+    </tr>
+  <% end %>
+</table>

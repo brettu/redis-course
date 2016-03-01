@@ -10,14 +10,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faker'
 gem 'redis', '~>3.2'
-
+gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'byebug'
 end
 
 group :development do
+  gem 'rack-mini-profiler'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'quiet_assets'
 end
 

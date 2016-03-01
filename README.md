@@ -97,6 +97,9 @@ An example application for the Express framework.
 
     [https://github.com/RailsApps/rails-composer](https://github.com/RailsApps/rails-composer)
 
+    [Rack mini profiler](https://github.com/MiniProfiler/rack-mini-profiler)
+
+
 - Redis
 
     [Redis](http://redis.io/)
