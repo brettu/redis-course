@@ -88,3 +88,4 @@ An example application for the Express framework.
 - Redis
 [Redis](http://redis.io/)
 [Quickstart guide](http://redis.io/topics/quickstart)
+[Redis config](https://raw.githubusercontent.com/antirez/redis/3.0/redis.conf)
