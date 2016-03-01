@@ -26,9 +26,9 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
     "somevalue"
     ```
 
-5. Clone this application and `cd` into the app directory.
+5. Clone this application.
 
-6. From the application root run `bundle install`
+6. `cd` into the application root run `bundle install`
 
 7. Download the example DB [here](http://bwcompsci.s3.amazonaws.com/presentations/clickbait_dev.tar)
 
