@@ -1,10 +1,8 @@
 # Rails, Redis, & Postgres Case Study
 
-Follow this course to see how Redis and Postgres can work together for high performance custom application development.
-
 ## Goals
 
-Learn how Redis can help your relational database driven application performance.
+Learn how Redis can help improve performance of your relational database driven application.
 
 ## Setup the application demo
 
@@ -16,7 +14,7 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
 
 3. Follow the Homebrew Postgres instructions in the above guide to install with or download the Postgres app for MAC [here](http://postgresapp.com/). I find the Postgres app to be very useful.
 
-4. Install Redis with Homebrew with `$ brew install redis`. Then follow the prompt to start the server. Run the following:
+4. Install Redis with Homebrew with `$ brew install redis`. Then follow the prompt to start the server. Run the following to confirm things are working:
 
 ```bash
 $ redis-cli
@@ -51,20 +49,26 @@ OR with rake and Rails
 
 `$ rake db:create`
 
-
 9. Restore the database with `$ pg_restore -d clickbait_development clickbait_dev.tar`
 
 10. Run `$ rake db:migrate` and start the console with `$ rails console`
 
-11. In console you should see the following:
+11. In console query to confirm  365000 score cards have been created.
 
 ```bash
-➜  redis-course git:(master) rails c
-Running via Spring preloader in process 68649
-Loading development environment (Rails 4.2.5.1)
+$ rails c
 irb(main):001:0> ScoreCard.count
    (49.9ms)  SELECT COUNT(*) FROM "score_cards"
 => 365000
+```
+
+12. Test redis in rails console:
+
+```
+$ rails c
+irb(main):001:0> $redis.ping
+=> "PONG"
+irb(main):002:0>
 ```
 
 Issues? Google the exception message or open a issue in this repo.
