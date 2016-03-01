@@ -37,7 +37,7 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
     To create the database with psql:
 
     ```bash
-    ➜  redis-course git:(master) ✗ psql
+    $ psql
     psql (9.4.0)
     Type "help" for help.
 
@@ -82,14 +82,21 @@ An example application for the Express framework.
 ### Links/Resources
 
 - Postgres
-[Postgres Documentation](http://www.postgresql.org/docs/9.5/interactive/index.html)
-[Postgres for MAC app](http://postgresapp.com/)
+
+    [Postgres Documentation](http://www.postgresql.org/docs/9.5/interactive/index.html)
+
+    [Postgres for MAC app](http://postgresapp.com/)
 
 - Rails
-[http://rubyonrails.org/](http://rubyonrails.org/)
-[https://github.com/RailsApps/rails-composer](https://github.com/RailsApps/rails-composer)
+
+    [http://rubyonrails.org/](http://rubyonrails.org/)
+
+    [https://github.com/RailsApps/rails-composer](https://github.com/RailsApps/rails-composer)
 
 - Redis
-[Redis](http://redis.io/)
-[Quickstart guide](http://redis.io/topics/quickstart)
-[Redis config](https://raw.githubusercontent.com/antirez/redis/3.0/redis.conf)
+
+    [Redis](http://redis.io/)
+
+    [Quickstart guide](http://redis.io/topics/quickstart)
+
+    [Redis config](https://raw.githubusercontent.com/antirez/redis/3.0/redis.conf)
