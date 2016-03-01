@@ -16,15 +16,15 @@ This example uses Rails, Postgres, and Redis. Please follow the installation gui
 
 4. Install Redis with Homebrew with `$ brew install redis`. Then follow the prompt to start the server. Run the following to confirm things are working:
 
-```bash
-$ redis-cli
-redis 127.0.0.1:6379> ping
-PONG
-redis 127.0.0.1:6379> set mykey somevalue
-OK
-redis 127.0.0.1:6379> get mykey
-"somevalue"
-```
+    ```bash
+    $ redis-cli
+    redis 127.0.0.1:6379> ping
+    PONG
+    redis 127.0.0.1:6379> set mykey somevalue
+    OK
+    redis 127.0.0.1:6379> get mykey
+    "somevalue"
+    ```
 
 5. Clone this application and `cd` into the app directory.
 
@@ -34,20 +34,20 @@ redis 127.0.0.1:6379> get mykey
 
 8. Create the 'clickbait_development' database with psql or rake.
 
-To create the database with psql:
+    To create the database with psql:
 
-```bash
-➜  redis-course git:(master) ✗ psql
-psql (9.4.0)
-Type "help" for help.
+    ```bash
+    ➜  redis-course git:(master) ✗ psql
+    psql (9.4.0)
+    Type "help" for help.
 
-BrettU=# create database clickbait_development;
-CREATE DATABASE
-```
+    BrettU=# create database clickbait_development;
+    CREATE DATABASE
+    ```
 
-OR with rake and Rails
+    OR with rake and Rails
 
-`$ rake db:create`
+    `$ rake db:create`
 
 9. Restore the database with `$ pg_restore -d clickbait_development clickbait_dev.tar`
 
@@ -55,21 +55,21 @@ OR with rake and Rails
 
 11. In console query to confirm  365000 score cards have been created.
 
-```bash
-$ rails c
-irb(main):001:0> ScoreCard.count
-   (49.9ms)  SELECT COUNT(*) FROM "score_cards"
-=> 365000
-```
+    ```bash
+    $ rails c
+    irb(main):001:0> ScoreCard.count
+       (49.9ms)  SELECT COUNT(*) FROM "score_cards"
+    => 365000
+    ```
 
 12. Test redis in rails console:
 
-```
-$ rails c
-irb(main):001:0> $redis.ping
-=> "PONG"
-irb(main):002:0>
-```
+    ```
+    $ rails c
+    irb(main):001:0> $redis.ping
+    => "PONG"
+    irb(main):002:0>
+    ```
 
 Issues? Google the exception message or open a issue in this repo.
 
