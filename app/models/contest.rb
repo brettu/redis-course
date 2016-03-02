@@ -50,10 +50,3 @@ class Contest < ActiveRecord::Base
     # remove the contest redis keys from memory
   end
 end
-
-
-
-
-irb(main):001:0> c = Contest.current
-=> #<Contest id: 1159, name: nil, day: 62, prize: "Hercules Double IPA", created_at: "2016-02-29 15:59:47", updated_at: "2016-02-29 15:59:47">
-irb(main):002:0> c.seed_points!
