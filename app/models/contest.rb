@@ -3,8 +3,8 @@ class Contest < ActiveRecord::Base
   has_many :score_cards
   has_many :users, through: :score_cards
 
-  def self.current_contest
-    where(day: Date.today.yday)
+  def self.current
+    where(day: Date.today.yday).first
   end
 
   def seed_points!
@@ -30,7 +30,10 @@ class Contest < ActiveRecord::Base
 
 
   def leaderboard_with_scores
-    $redis.zrevrangebyscore("contest:#{id}", "+inf", "(1", with_scores: true, limit: [0,10])
+    $redis.zrevrangebyscore("contest:#{id}", "+inf", "(1",
+      with_scores: true,
+      limit: [0,10]
+    )
   end
 
   def user_score(user)
@@ -47,3 +50,10 @@ class Contest < ActiveRecord::Base
     # remove the contest redis keys from memory
   end
 end
+
+
+
+
+irb(main):001:0> c = Contest.current
+=> #<Contest id: 1159, name: nil, day: 62, prize: "Hercules Double IPA", created_at: "2016-02-29 15:59:47", updated_at: "2016-02-29 15:59:47">
+irb(main):002:0> c.seed_points!

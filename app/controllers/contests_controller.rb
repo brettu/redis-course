@@ -1,7 +1,7 @@
 class ContestsController < ApplicationController
 
   def show
-    @contest = Contest.current_contest
+    @contest = Contest.current
     @leaderboard = []
     @winner = []
   end
