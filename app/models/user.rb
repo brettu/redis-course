@@ -1,5 +1,13 @@
 class User < ActiveRecord::Base
+
   has_many :score_cards
+  has_many :contests, through: :score_cards
+
+  def vote(contest_id, value)
+    unless $redis.zadd("contest:#{contest_id}", value, id)
+      $redis.zincrby("contest:#{contest_id}", value, id)
+    end
+  end
 
   def animals_spotted
     (1..5).each do |i|

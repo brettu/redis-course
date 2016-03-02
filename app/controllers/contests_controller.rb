@@ -1,14 +1,9 @@
 class ContestsController < ApplicationController
+
   def show
-    @contest = Contest.includes(:score_card).where(id: params[:id])
+    @contest = Contest.current_contest
+    @leaderboard = []
+    @winner = []
   end
 
-  def vote
-    Contest.add_vote(params)  
-  end
-
-  def leaderboard
-
-
-  end
 end

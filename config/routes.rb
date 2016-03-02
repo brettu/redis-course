@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'contests#show'
   resources :contests
 
   # Example resource route with options:
